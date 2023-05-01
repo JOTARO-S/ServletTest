@@ -15,6 +15,25 @@
 }
 %>
 
+
+<%--パターン１ --%>
+<table>
+<% for(int i=0; i<5; i++) { %>
+	<tr>
+		<td>name<%= i + 1 %></td><td>address<%= i + 1 %></td>
+	</tr>
+<% } %>
+</table>
+<table>
+<%--パターン２ --%>
+<% for(int i=0; i<5; i++) { 
+	out.println("<tr>");
+	out.println("<td>name</td><td>address</td>");
+	out.println("</tr>");
+} %>
+</table>
+<%--パターン２だと記述が長くなってしまう為、長くなる場合はパターン１にするなど状況に応じて使い分けるとよい --%>
+
 <!-- testest -->
 <!--
 <form action="../HelloWorld" method="post">
@@ -43,6 +62,9 @@
 
   --%>
 
+<%-- jsp:include では@ page ディレクティブのpageEncoding属性が必須(ページ間での文字化けが発生してしまう可能性がある)
+	インクルードファイルを含むページでは親ページではcontentType, 子ページはpageEncoding 属性で宣言する。
+  --%>
 <jsp:include page="include.jsp" /> <!-- jsp:include page="include.jsp" ⇒ include.jsp の内容を埋め込む(インクルードする)処理 -->
 </body>
 </html>
