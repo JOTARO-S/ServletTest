@@ -39,6 +39,10 @@ public class HelloWorld extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		//String name = request.getParameter("name");
+        //String message = "こんにちは、" + name + "さん！";
+        //request.setAttribute("message", message);
+        //request.getRequestDispatcher("exam0501/NewFile.jsp").forward(request, response);
 	}
 
 }
