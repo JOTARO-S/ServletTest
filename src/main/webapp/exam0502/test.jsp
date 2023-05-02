@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8" import="java.util.*"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -7,14 +7,12 @@
 <title>@o@</title>
 </head>
 <body>
-<p>ログイン<p>
-<form method="post" action="../Test">
-	<label>メールアドレス:</label>
-	<input type="address" name="mail" required>
-	<label>パスワード:</label>
-	<input type="password" name="password" required>
-	<button type="submit">送信</button>
+<form>
+	<input type="text" name="test" />
+	<input type="submit" value="決定" />
 </form>
+<% out.println(request.getServletPath()); %>
+
 
 </body>
 </html>
