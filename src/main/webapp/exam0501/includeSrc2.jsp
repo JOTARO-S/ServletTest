@@ -9,6 +9,7 @@
 </head>
 <body>
 	<p>インクルードされた部分です</p>
-	<%= new Date() %>
+	<% String textsize = request.getParameter("testsize"); %>
+	<<%= textsize %>><%= new Date() %></<%= textsize %>>
 </body>
 </html>

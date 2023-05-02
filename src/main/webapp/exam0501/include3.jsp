@@ -8,6 +8,8 @@
 </head>
 <body>
 <h1>includeテスト</h1>
-<jsp:include page="includeSrc2.jsp" />
+<jsp:include page="includeSrc2.jsp">
+<jsp:param name="textsize" value="h1" />
+</jsp:include>
 </body>
 </html>
