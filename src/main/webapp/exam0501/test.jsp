@@ -7,7 +7,7 @@
 <title>test</title>
 </head>
 <body>
-<form  action="../HelloWorld" method="post">
+<form  action="../Test" method="post">
 	<label>名前:</label>
 	<input type="text" name="name" required><br>
 	<label>アドレス:</label>
