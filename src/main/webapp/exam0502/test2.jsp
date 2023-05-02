@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>test</title>
+<title>${name}</title>
 </head>
 <body>
-	<p>${message}</p>
+	<p>こんにちは、${name} さん！</p>
 </body>
 </html>

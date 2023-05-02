@@ -7,12 +7,16 @@
 <title>@o@</title>
 </head>
 <body>
-<form>
-	<input type="text" name="test" />
+<h3>GET</h3>
+<form method="GET" action="../hellocall">
+	<input type="text" name="name" />
 	<input type="submit" value="決定" />
 </form>
-<% out.println(request.getServletPath()); %>
-
+<h3>POST</h3>
+<form method="POST" action="../hellocall">
+	<input type="text" name="name" />
+	<input type="submit" value="決定" />
+</form>
 
 </body>
 </html>
