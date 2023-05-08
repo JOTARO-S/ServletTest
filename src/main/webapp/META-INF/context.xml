@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Context>
+  <Resource
+      name="jdbc/test"
+      auth="Container"
+      type="javax.sql.DataSource"
+      driverClassName="com.mysql.jdbc.Driver"
+      url="jdbc:mysql://localhost/sample"
+      connectionProperties="autoReconnect=true;verifyServerCertificate=false;useSSL=false;requireSSL=false"
+      username="root"
+      password=""
+      validationQuery="select 1"/>
+ </Context>
+ 
+ <!-- name = データソースを識別する名前 など Servlet303p、304p参照 -->
+ <!-- url に mySQLのURLやテーブル名、username に mySQLのユーザー名、passwordに接続するためのパスワードを入力する -->
+ <!-- driverClassName は 使用するドライバの正式名称 mySQLの場合は com.mysql.jdbc.Driver となる -->
+ 
