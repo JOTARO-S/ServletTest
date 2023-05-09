@@ -32,30 +32,21 @@
 		<label>exam0502</label>
 		<input type="hidden" name="exam" value="exam0502">
 		<select name="link">
-			<option value="alink1">alink1</option>
-			<option value="alink2">alink2</option>
-			<option value="Book">Book</option>
-			<option value="check1">check1</option>
-			<option value="check2">check2</option>
-			<option value="check3">check3</option>
-			<option value="choose">choose</option>
-			<option value="for">for</option>
+			<option value="alink1">クエリ情報(alink1)</option>
+			<option value="check1">文字コード(check1)</option>
+			<option value="choose">taglib choose</option>
+			<option value="for">taglib for</option>
 			<option value="headers">header</option>
 			<option value="hello3">hello3</option>
 			<option value="if">if</option>
-			<option value="japan1">japan1</option>
-			<option value="japan2">japan2</option>
-			<option value="japan3">japan3</option>
+			<option value="japan1">文字コード</option>
 			<option value="map">map</option>
 			<option value="path">path</option>
 			<option value="post1">post1</option>
-			<option value="post2">post2</option>
 			<option value="qyery1">quary1</option>
-			<option value="query2">quary2</option>
 			<option value="set">set</option>
 			<option value="status">status</option>
 			<option value="test">test</option>
-			<option value="test1">test1</option>
 		</select> 
 		<input type="submit" value="送信">
 	</form>
@@ -63,15 +54,16 @@
 		<label>exam0508</label>
 		<input type="hidden" name="exam" value="exam0508">
 		<select name="link">
-			<option value="format_date_pattern">format_date_pattern</option>
-			<option value="format_date">format_date</option>
-			<option value="format_number_pattern">format_number_pattern</option>
 			<option value="format_number">format_number</option>
-			<option value="functions">functions</option>
-			<option value="locale">locate</option>
-			<option value="parse">parse</option>
-			<option value="query1">query1</option>
-			<option value="serv_post1">serv_post1</option>
+			<option value="format_number_pattern">format_number_pattern</option>
+			<option value="format_date">format_date</option>
+			<option value="format_date_pattern">format_date_pattern</option>
+			<option value="functions">Functionタグライブラリ</option>
+			<option value="locale">locate(時間帯の指定)</option>
+			<option value="parse">i18nタグライブラリ(parse)</option>
+			<option value="select1">SELECT文</option>
+			<option value="query1">Query(UPDATE文で新規追加)</option>
+			<option value="serv_post1">Servletを用いたdoPost</option>
 		</select> 
 		<input type="submit" value="送信">
 	</form>
@@ -79,8 +71,9 @@
 		<label>exam0509</label>
 		<input type="hidden" name="exam" value="exam0509">
 		<select name="link">
-			<option value="bmi">bmi</option>
-			<option value="shoppingCart">shoppingCart</option>
+			<option value="bmi">BMI指数の計算処理</option>
+			<option value="shoppingCart">ショッピングカート</option>
+			<option value="insert_from">SQLクエリ</option>
 		</select> 
 		<input type="submit" value="送信">
 	</form>
