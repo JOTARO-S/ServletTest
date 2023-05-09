@@ -12,3 +12,16 @@
   <res-auth>Container</res-auth>
  </resource-ref>
 </web-app>
+
+<!--
+
+<servlet>
+  <servlet-name>top</servlet-name>
+  <jsp-file>/top.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+  <servlet-name>top</servlet-name>
+  <url-pattern>/top</url-pattern>
+</servlet-mapping>
+
+-->
