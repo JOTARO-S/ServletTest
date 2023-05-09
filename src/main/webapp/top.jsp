@@ -73,7 +73,8 @@
 		<select name="link">
 			<option value="bmi">BMI指数の計算処理</option>
 			<option value="shoppingCart">ショッピングカート</option>
-			<option value="insert_from">SQLクエリ</option>
+			<option value="insert_from">SQLクエリ(UPDATE)</option>
+			<option value="result">SQLクエリ(SELECT)</option>
 		</select> 
 		<input type="submit" value="送信">
 	</form>

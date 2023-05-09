@@ -39,7 +39,7 @@ public class hellocall extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String name = request.getParameter("name");
         request.setAttribute("name", name);
-        request.getRequestDispatcher("exam0502/test2.jsp").forward(request, response);;
+        request.getRequestDispatcher("exam0502/test2.jsp").forward(request, response);
 	}
 
 }
