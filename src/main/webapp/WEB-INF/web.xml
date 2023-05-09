@@ -11,10 +11,11 @@
   <res-type>javax.sql.DataSource</res-type>
   <res-auth>Container</res-auth>
  </resource-ref>
-</web-app>
-
-<!--
-
+ <!-- sessionがタイムアウトするまでの時間を設定 -->
+ <session-config>
+	<session-timeout>30</session-timeout>
+</session-config>
+<!-- servletのmapping -->
 <servlet>
   <servlet-name>top</servlet-name>
   <jsp-file>/top.jsp</jsp-file>
@@ -23,5 +24,4 @@
   <servlet-name>top</servlet-name>
   <url-pattern>/top</url-pattern>
 </servlet-mapping>
-
--->
+</web-app>

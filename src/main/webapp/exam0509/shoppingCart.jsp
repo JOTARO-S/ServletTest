@@ -24,6 +24,12 @@
 	<br />
 	
 	<c:if test="${not empty orders }">
+	<%-- 
+	<%
+		String[] orders = (String[]) request.getAttribute("orders");
+		int length = orders.length 
+	%>
+	--%>
 		買い物カゴの中<br />
 		<ol>
 			<c:forEach items="${orders}" var="order">
