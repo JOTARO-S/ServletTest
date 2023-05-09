@@ -1,39 +1,38 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-<%-- Databaseタグライブラリを使用する際に入力する --%>
-<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
-<%--データベースへの接続を確立 --%>
-<sql:setDataSource var="db" dataSource="jdbc/test" />
-<%--SELECT命令を実行 --%>
-<sql:query var="rs" dataSource="${db}">
-	SELECT * FROM address ORDER BY id</sql:query>
 
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta content="charset=UTF-8">
-		<title>タグライブラリ</title>
+		<title>データの登録</title>
 	</head>
 	<body>
-	<h1>住所一覧</h1>
-	<table border="1">
-	<tr>
-		<th>名前</th>
-		<th>住所</th>
-		<th>電話番号</th>
-		<th>E-Mailアドレス</th>
-	</tr>
-	<%-- 結果セットから順番にレコード（フィールド値）を取得 & 表示する --%>
-	<c:forEach var="row" items="${rs.rows}">
-	<tr>
-		<td>${row.name}</td>
-		<td>${row.address}</td>
-		<td>${row.tel}</td>
-		<td>${row.email}</td>
-	</tr>
-	</c:forEach>
-	</table>
+	<form method="POST" action="../InsertProcess">
+		<table border="1">
+			<tr>
+				<th>名前</th>
+				<td><input type="text" name="name" size="15" maxlength="50" /></td>
+			</tr>
+			</tr>
+				<th>住所</th>
+				<td><input type="text" name="address" size="35" maxlength="150" /></td>
+			</tr>
+			<tr>
+				<th>電話番号</th>
+				<td><input type="text" name="tel" size="20" maxlength="20" /></td>
+			</tr>
+			<tr>
+				<th>E-Mailアドレス</th>
+				<td><input type="text" name="email" size="50" maxlength="100" /></td>
+			</tr>
+			<tr>
+				<th colspan="2">
+					<input type="submit" value="登録" />
+					<input type="reset" value="クリア" />
+				</th>
+			</tr>
+		</table>
+	</form>
 	</body>
 </html>
