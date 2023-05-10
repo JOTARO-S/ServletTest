@@ -10,7 +10,8 @@
 	<p>リンク</p>
 	<form method="post" action="LinkTest">
 		<label>exam0501</label>
-		<input type="hidden" name="exam" value="exam0501">
+		<input type="hidden" name="exam" value="exam0501/">
+		<input type="hidden" name="jsp" value=".jsp">
 		<select name="link">
 			<option value="Counter">Counter</option>
 			<option value="date">date</option>
@@ -30,7 +31,8 @@
 	</form>
 	<form method="post" action="LinkTest">
 		<label>exam0502</label>
-		<input type="hidden" name="exam" value="exam0502">
+		<input type="hidden" name="exam" value="exam0502/">
+		<input type="hidden" name="jsp" value=".jsp">
 		<select name="link">
 			<option value="alink1">クエリ情報(alink1)</option>
 			<option value="check1">文字コード(check1)</option>
@@ -52,7 +54,8 @@
 	</form>
 	<form method="post" action="LinkTest">
 		<label>exam0508</label>
-		<input type="hidden" name="exam" value="exam0508">
+		<input type="hidden" name="exam" value="exam0508/">
+		<input type="hidden" name="jsp" value=".jsp">
 		<select name="link">
 			<option value="format_number">format_number</option>
 			<option value="format_number_pattern">format_number_pattern</option>
@@ -69,12 +72,31 @@
 	</form>
 	<form method="post" action="LinkTest">
 		<label>exam0509</label>
-		<input type="hidden" name="exam" value="exam0509">
+		<input type="hidden" name="exam" value="exam0509/">
+		<input type="hidden" name="jsp" value=".jsp">
 		<select name="link">
 			<option value="bmi">BMI指数の計算処理</option>
 			<option value="shoppingCart">ショッピングカート</option>
 			<option value="insert_from">SQLクエリ(UPDATE)</option>
 			<option value="result">SQLクエリ(SELECT)</option>
+		</select> 
+		<input type="submit" value="送信">
+	</form>
+	<form method="post" action="LinkTest">
+		<label>exam0510</label>
+		<input type="hidden" name="exam" value="exam0510/">
+		<input type="hidden" name="jsp" value=".jsp">
+		<select name="link">
+			<option value=""></option>
+		</select> 
+		<input type="submit" value="送信">
+	</form>
+	<form method="post" action="LinkTest">
+		<label>servlet</label>
+		<input type="hidden" name="exam" value="">
+		<input type="hidden" name="jsp" value="">
+		<select name="link">
+			<option value="Result">SQLクエリ(SELECT)</option>
 		</select> 
 		<input type="submit" value="送信">
 	</form>

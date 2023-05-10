@@ -39,9 +39,9 @@ public class LinkTest extends HttpServlet {
 		// TODO Auto-generated method stub
 		String exam = request.getParameter("exam");
 		String link = request.getParameter("link");
+		String jsp = request.getParameter("jsp");
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out.println("<a href=/ServletTest/" + exam + "/" + link + ".jsp> /ServletTest/" + exam + "/" + link + ".jsp </a>" );
+		out.println("<a href=/ServletTest/" + exam + link + jsp + "> /ServletTest/" + exam + link + jsp + "</a>" );
 	}
-
 }

@@ -12,7 +12,7 @@ public class Address implements Serializable {
 		
 	}
 
-	String getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -20,7 +20,7 @@ public class Address implements Serializable {
 		this.name = name;
 	}
 
-	String getAddress() {
+	public String getAddress() {
 		return address;
 	}
 
@@ -28,7 +28,7 @@ public class Address implements Serializable {
 		this.address = address;
 	}
 
-	String getTel() {
+	public String getTel() {
 		return tel;
 	}
 
@@ -36,7 +36,7 @@ public class Address implements Serializable {
 		this.tel = tel;
 	}
 
-	String getEmail() {
+	public String getEmail() {
 		return email;
 	}
 
