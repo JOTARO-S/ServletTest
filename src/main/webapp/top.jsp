@@ -7,12 +7,13 @@
 <title>トップページ</title>
 </head>
 <body>
-	<p>リンク</p>
+	<h3>リンク生成</h3>
+	
 	<form method="post" action="LinkTest">
 		<label>exam0501</label>
 		<input type="hidden" name="exam" value="exam0501/">
 		<input type="hidden" name="jsp" value=".jsp">
-		<select name="link">
+		<select name="link" style="width: 250px;">
 			<option value="Counter">Counter</option>
 			<option value="date">date</option>
 			<option value="fowardFrom">fowardFrom</option>
@@ -29,11 +30,12 @@
 		</select> 
 		<input type="submit" value="送信">
 	</form>
-	<form method="post" action="LinkTest">
+	
+	<form method="post" action="LinkTest" style="margin-top:10px;">
 		<label>exam0502</label>
 		<input type="hidden" name="exam" value="exam0502/">
 		<input type="hidden" name="jsp" value=".jsp">
-		<select name="link">
+		<select name="link" style="width: 250px;">
 			<option value="alink1">クエリ情報(alink1)</option>
 			<option value="check1">文字コード(check1)</option>
 			<option value="choose">taglib choose</option>
@@ -52,11 +54,12 @@
 		</select> 
 		<input type="submit" value="送信">
 	</form>
-	<form method="post" action="LinkTest">
+	
+	<form method="post" action="LinkTest" style="margin-top:10px;">
 		<label>exam0508</label>
 		<input type="hidden" name="exam" value="exam0508/">
 		<input type="hidden" name="jsp" value=".jsp">
-		<select name="link">
+		<select name="link" style="width: 250px;">
 			<option value="format_number">format_number</option>
 			<option value="format_number_pattern">format_number_pattern</option>
 			<option value="format_date">format_date</option>
@@ -70,33 +73,35 @@
 		</select> 
 		<input type="submit" value="送信">
 	</form>
-	<form method="post" action="LinkTest">
+	
+	<form method="post" action="LinkTest" style="margin-top:10px;">
 		<label>exam0509</label>
 		<input type="hidden" name="exam" value="exam0509/">
 		<input type="hidden" name="jsp" value=".jsp">
-		<select name="link">
+		<select name="link" style="width: 250px;">
 			<option value="bmi">BMI指数の計算処理</option>
-			<option value="shoppingCart">ショッピングカート</option>
 			<option value="insert_from">SQLクエリ(UPDATE)</option>
-			<option value="result">SQLクエリ(SELECT)</option>
 		</select> 
 		<input type="submit" value="送信">
 	</form>
-	<form method="post" action="LinkTest">
+	
+	<form method="post" action="LinkTest" style="margin-top:10px;">
 		<label>exam0510</label>
 		<input type="hidden" name="exam" value="exam0510/">
 		<input type="hidden" name="jsp" value=".jsp">
-		<select name="link">
-			<option value=""></option>
+		<select name="link" style="width: 250px;">
+			<option value="insert_from">トランザクション</option>
 		</select> 
 		<input type="submit" value="送信">
 	</form>
-	<form method="post" action="LinkTest">
-		<label>servlet</label>
+	
+	<form method="post" action="LinkTest" style="margin-top:10px;">
+		<label>サーブレット</label>
 		<input type="hidden" name="exam" value="">
 		<input type="hidden" name="jsp" value="">
-		<select name="link">
+		<select name="link" style="width: 236px;">
 			<option value="Result">SQLクエリ(SELECT)</option>
+			<option value="shoppingCart">ショッピングカート</option>
 		</select> 
 		<input type="submit" value="送信">
 	</form>

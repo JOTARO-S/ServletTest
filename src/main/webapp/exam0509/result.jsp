@@ -31,21 +31,18 @@
 <%--	Javaを用いたデータの取り出し(調整中) 
 	<%
 	//リクエストスコープからのデータの取得
-	Address list = (Address)request.getAttribute("data");
+	ArrayList<Address> list = (ArrayList<Address>) request.getAttribute("data");
 	for (Address data : list) {
-		String name = data.getName();
-		String address = data.getAddress();
-		String tel = data.getTel();
-		String email = data.getEmail();
 	%>
 	<tr>
-		<td><%= name %></td>
-		<td><%= address %></td>
-		<td><%= tel %></td>
-		<td><%= email %></td>
+		<td><%= data.getName(); %></td>
+		<td><%= data.getAddress(); %></td>
+		<td><%= data.getTel(); %></td>
+		<td><%= data.getEmail(); %></td>
 	</tr>
 	<% } %>
---%>
+ --%>
+ 
 	</table>
 	</body>
 </html>
