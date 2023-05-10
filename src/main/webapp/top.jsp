@@ -7,7 +7,7 @@
 <title>トップページ</title>
 </head>
 <body>
-	<h3>リンク生成</h3>
+	<h3>リンク</h3>
 	
 	<form method="post" action="LinkTest">
 		<label>exam0501</label>
@@ -102,6 +102,7 @@
 		<select name="link" style="width: 236px;">
 			<option value="Result">SQLクエリ(SELECT)</option>
 			<option value="shoppingCart">ショッピングカート</option>
+			<option value="login">login</option>
 		</select> 
 		<input type="submit" value="送信">
 	</form>

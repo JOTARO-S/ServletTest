@@ -9,16 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class LinkTest
+ * Servlet implementation class LoginServlet
  */
-@WebServlet("/LinkTest")
-public class LinkTest extends HttpServlet {
+@WebServlet("/main2")
+public class MainController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LinkTest() {
+    public MainController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,10 +28,10 @@ public class LinkTest extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String exam = request.getParameter("exam");
-		String link = request.getParameter("link");
-		String jsp = request.getParameter("jsp");
-		request.getRequestDispatcher(exam + link + jsp).forward(request, response);
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		request.setAttribute("message", "名前:" + name + " / メール:" + email);
+		request.getRequestDispatcher("exam0510/main.jsp").forward(request, response);
 	}
 
 	/**
@@ -41,4 +41,5 @@ public class LinkTest extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+
 }
