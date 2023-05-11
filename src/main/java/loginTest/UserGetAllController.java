@@ -1,6 +1,7 @@
 package loginTest;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,17 +10,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import entity.UserEntity;
+
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class UserGetAllController
  */
-@WebServlet("/main")
-public class MainController extends HttpServlet {
+@WebServlet("/result")
+public class UserGetAllController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MainController() {
+    public UserGetAllController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,11 +38,13 @@ public class MainController extends HttpServlet {
 		Object name = session.getAttribute("currentName");
 		Object email = session.getAttribute("currentEmail");
 		if (id != null) {
-		request.setAttribute("loginMessage","ログイン中 / " + "id:" + id + " / 名前:" + name + " / メール:" + email);
-		request.getRequestDispatcher("test/main.jsp").forward(request, response);
-		} else {
-			response.sendRedirect("login");
+			request.setAttribute("loginMessage","ログイン中 / " + "id:" + id + " / 名前:" + name + " / メール:" + email);
 		}
+		UserModel um = new UserModel();
+		List<UserEntity> data = um.getUserAll();
+		request.setAttribute("data", data);
+		request.getRequestDispatcher("test/result.jsp").forward(request, response);
+		
 	}
 
 	/**
@@ -47,10 +52,7 @@ public class MainController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session = request.getSession();
-		session.removeAttribute("currentId");
-		session.removeAttribute("currentName");
-		session.removeAttribute("currentEmail");
-		response.sendRedirect("login");
+		doGet(request, response);
 	}
+
 }

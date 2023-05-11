@@ -31,8 +31,16 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8");
+		HttpSession session = request.getSession();
+		Object id = session.getAttribute("currentId");
 		//doGetなのでloginにアクセスしたらforward(URLはそのまま)でexam0510/form.jspを表示させる
-		request.getRequestDispatcher("exam0510/form.jsp").forward(request, response);
+		if (id != null) {
+			response.sendRedirect("main");
+		} else {
+			request.getRequestDispatcher("test/form.jsp").forward(request, response);
+		}
+		
 	}
 
 	/**
@@ -52,13 +60,13 @@ public class LoginController extends HttpServlet {
 		
 		if (user != null) {
 			HttpSession session = request.getSession();
-			session.setAttribute("id", user.getId());
-			session.setAttribute("name", user.getName());
-			session.setAttribute("email", user.getEmail());
+			session.setAttribute("currentId", user.getId());
+			session.setAttribute("currentName", user.getName());
+			session.setAttribute("currentEmail", user.getEmail());
 			response.sendRedirect("main");
 		} else {
 			request.setAttribute("message", "名前とメールに一致するユーザーはいません");
-			request.getRequestDispatcher("exam0510/form.jsp").forward(request, response);
+			request.getRequestDispatcher("test/form.jsp").forward(request, response);
 		}
 	}
 }
